@@ -143,18 +143,18 @@ export default function Index() {
                                             <td>{user.name}</td>
                                             <td>{user.email}</td>
                                             <td>{user.password}</td>
-                                            <td className='btn btn-danger'  onClick={()=>deleteUser(user._id)}>delete</td>
-                                            <td className='btn btn-info' ><Link to = {`/user/${user._id}`}>details</Link></td>
-                                            <td className='btn btn-warning' onClick={()=>getUsers(user._id)}>
+                                            <td className='btn btn-danger ms-3 mb-1'  onClick={()=>deleteUser(user._id)}>delete</td>
+                                            <td className='btn btn-info ms-3 mb-1' ><Link to = {`/user/${user._id}`}>details</Link></td>
+                                            <td className='btn btn-warning ms-3 mb-1' onClick={()=>getUsers(user._id)}>
                                             <Link to = {`/user/edit/${user._id}`}>edit</Link>
                                             </td>
-
                                         </tr>
                                     </React.Fragment>
                                 )
                             }):<h2>no user data</h2>}
                         </tbody>
                     </table>
+                    <Link to={`/user/create`} className='bg-success rounded-pill text-black text-decoration-none p-2 '>Add New User</Link>
                 </div>
             </div>
         </div>
